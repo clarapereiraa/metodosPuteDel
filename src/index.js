@@ -1,11 +1,12 @@
 const express = require("express"); //Importa o módulo Express
-
+const testConnect = require("./db/testConnect")
 class AppController {
   //Define uma classe para organizar a lógica da aplicação
   constructor() {
     this.express = express(); //Cria uma nova instância do Express dentro da classe
     this.middlewares(); //Chama o método middlewares para configurar os middlewares
     this.routes(); //Chama o método routes para definir as rotas da API
+    testConnect()
   }
 
   middlewares() {
